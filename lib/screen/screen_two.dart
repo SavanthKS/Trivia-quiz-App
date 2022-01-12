@@ -32,7 +32,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                       style: const TextStyle(color: Colors.blue, fontSize: 18),
                     ),
                     Text(context.read<ApiProvider>().currentQuestion.question),
-                    const Text("Choose",
+                    const Text("Chose",
                         style: TextStyle(color: Colors.blue, fontSize: 18)),
                     for (int i = 0;
                         i <
