@@ -23,17 +23,21 @@ class _ScreenTwoState extends State<ScreenTwo> {
             ),
             body: Container(
                 margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                //color: Colors.red,
+                
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    const SizedBox(height: 80,),
                     Text(
                       "Question ${context.read<ApiProvider>().questionIndex + 1}",
                       style: const TextStyle(color: Colors.blue, fontSize: 18),
                     ),
+                    const SizedBox(height: 10),
                     Text(context.read<ApiProvider>().currentQuestion.question),
-                    const Text("Chose",
+                    const SizedBox(height: 80,),
+                    const Text("Choose",
                         style: TextStyle(color: Colors.blue, fontSize: 18)),
+                        //const SizedBox(height: 20,),
                     for (int i = 0;
                         i <
                             context
@@ -95,6 +99,7 @@ class _CustomListTileState extends State<CustomListTile> {
     return ListTile(
       title: Text(widget.data),
       leading: Radio<String>(
+        activeColor: Colors.blue,
           value: widget.data,
           groupValue: context.watch<ApiProvider>().selectedAnswer,
           onChanged: (String? value) {

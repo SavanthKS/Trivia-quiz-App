@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         title: "Trivia",
         home: const ScreenOne(),
         theme: ThemeData(
+          
           primarySwatch: Colors.amber,
           appBarTheme: const AppBarTheme(
               backgroundColor: Colors.transparent,
